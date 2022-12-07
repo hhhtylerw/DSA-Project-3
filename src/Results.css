@@ -1,0 +1,14 @@
+div > p {
+  background: white;
+  border: 0.5px solid #F2F3EC;
+  margin: 0px;
+  padding: 12px;
+  display: flex;
+  font-family: 'Roboto';
+  font-weight: bolder;
+}
+
+div > p > span {
+  margin-left: auto;
+  font-weight: light;
+}

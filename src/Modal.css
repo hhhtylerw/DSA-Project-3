@@ -1,0 +1,196 @@
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-blur-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 0.4;
+}
+
+
+.modal-data-container{
+  background-color: #FAFDF9;
+  z-index: 1;
+  padding: 24px;
+  height: 60vh;
+  width: 60vw;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  animation: popUpModal 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+@keyframes popUpModal {
+  0% {
+    transform:scale3d(0.4,0.4,1);
+  },
+  100% {
+    transform: scale3d(1,1,1);
+  }
+}
+
+
+
+/* Racer containers */
+
+.racer-container{
+  text-align: center;
+  flex-grow: 1;
+  width: 200px;
+}
+
+.racer-container > h4 {
+  background: #e0e0e0;
+  margin: 0px;
+  padding: 12px;
+  border: 1px solid #d1d1d1;
+}
+
+.racer-container > p {
+  margin: 0px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+}
+
+
+/* see results btn */
+
+.see-results-btn > button {
+  padding: 12px 24px;
+  background-color: #d3530d;
+  border: 2px solid #d3530d;
+  border-radius: 0px;
+  color: white;
+  font-family: '';
+  font-size: 14px;
+  font-family: 'Archivo Black';
+  transition: 0.3s all ease-in-out;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.see-results-btn > button:hover{
+  cursor: pointer;
+  background-color: #BA5825;
+}
+.see-results-btn > button:disabled{
+  background-color: #ff955c;
+  background-color: #ffffff;
+  color: #bababa;
+  border: 2px solid #bababa;
+  cursor: not-allowed;
+}
+
+
+
+/* Dancing giphy */
+
+.albert-dancing{
+  position: absolute;
+  bottom: -4px;
+  left: 12px;
+  z-index: 2;
+}
+
+.albert-dancing > iframe{
+  width: 200px;
+  height: 200px;
+}
+
+.alberta-dancing{
+  position: absolute;
+  bottom: -4px;
+  right: 12px;
+  z-index: 2;
+}
+
+.alberta-dancing > iframe{
+  width: 200px;
+  height: 200px;
+}
+
+/* giphy text */
+
+.albert-text{
+  max-width: 200px;
+  padding: 12px;
+  text-align: center;
+  margin: 0px;
+  font-size: 14px;
+}
+.alberta-text{
+  
+}
+
+
+
+/* Racer winner */
+
+.racer-winner {
+  height: 200px;
+  padding: 0px;
+}
+.racer-winner > h4 {
+  border: 1px solid rgb(38, 187, 51, 0.2);
+  background-color: rgb(57, 234, 71, 0.2);
+  padding: 12px;
+  margin: 0px;
+}
+
+.racer-loser {
+  height: 200px;
+  padding: 0px;
+}
+.racer-loser > h4 {
+  border: 1px solid rgb(255, 0, 0, 0.2);
+  background-color: rgb(230, 10, 10, 0.1);
+  padding: 12px;
+  margin: 0px;
+}
+
+.won-medal{
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  animation: showWinner 0.9s cubic-bezier(.47,1.64,.41,.8);
+  z-index: 1;
+}
+.won-medal > p {
+  font-size: 24px;
+  margin: 0px;
+}
+
+@keyframes showWinner {
+  0%{
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  },
+  90%{
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  },
+  100%{
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
